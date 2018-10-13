@@ -121,4 +121,35 @@ import org.scalatest.junit.JUnitRunner
     assert(max(List(3, 7, 2)) === 7)
   }
 
+
+  test("makes arithmetic sum") {
+    assert(sum(List(1,2,-3)) === 0)
+  }
+
+  test("sums even negative numbers to negative values") {
+    assert(sum(List(-3,-4,-5, -5)) === -17)
+  }
+
+  test("return 0 if the list is empty") {
+    assert(sum(List()) === 0)
+  }
+
+
+  // Tests for the max function
+  test("return 0 as the max if the list is empty") {
+    assert(max(List()) === 0)
+  }
+
+  test("get the maximum with positive values") {
+    assert(max(List(2,6,7,8,1,10)) === 10)
+  }
+
+  test("get the maximum from negative values") {
+    assert(max(List(-2,-4,-6,-1,-6000)) === -1)
+  }
+
+  test("get the maximum in mixied values") {
+    assert(max(List(3,4,10,-500, -3, 20)) === 20)
+  }
+
 }
