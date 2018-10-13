@@ -24,10 +24,7 @@ object Lists {
    * @return The sum of all elements in `xs`
    */
     def sum(xs: List[Int]): Int = {
-      if(xs.isEmpty) {
-        return 0
-      }
-      return xs.reduce((a: Int, b:Int) => a+b)
+      if(xs.isEmpty) 0 else xs.reduce((a: Int, b:Int) => a+b)
     }
   
   /**
@@ -44,7 +41,6 @@ object Lists {
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
     def max(xs: List[Int]): Int = {
-      if(xs.isEmpty) return 0
-      return xs.reduce(Math.max)
+      if(xs.isEmpty) throw new java.util.NoSuchElementException else xs.reduce(Math.max)
     }
   }
