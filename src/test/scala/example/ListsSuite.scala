@@ -136,8 +136,10 @@ import org.scalatest.junit.JUnitRunner
 
 
   // Tests for the max function
-  test("return 0 as the max if the list is empty") {
-    assert(max(List()) === 0)
+  test("throw NoSuchElementException if if the list is empty") {
+    intercept[NoSuchElementException] {
+      max(List())
+    }
   }
 
   test("get the maximum with positive values") {
